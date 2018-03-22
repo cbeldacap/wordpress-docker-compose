@@ -1,0 +1,22 @@
+version: '3.1'
+
+services:
+  wordpress:
+    image: wordpress
+    restart: always
+    container_name: devonfw_wp
+    volumes:
+      - './volumes/wordpress/wp-content:/var/www/html/wp-content'
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_PASSWORD: wp-password
+
+  mysql:
+    image: mysql:5.7
+    restart: always
+    container_name: devonfw_wp_mysql
+    volumes:
+      - './volumes/mysql/data:/var/lib/mysql'
+    environment:
+      MYSQL_ROOT_PASSWORD: wp-password
