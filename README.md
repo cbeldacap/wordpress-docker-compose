@@ -19,3 +19,5 @@ drwx------ 33 root root 4096 Mar 22 16:05 ../
 -rw-r--r--  1 root root  198 Mar 22 16:04 README.md
 drwxr-xr-x  3 root root 4096 Mar 22 10:07 volumes/
 ```
+
+4. If you didn't extra configure the `docker-compose.yml` file, you should see your wordpress server ready at [http://your-host:8080]().
