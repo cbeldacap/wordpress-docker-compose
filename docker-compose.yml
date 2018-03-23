@@ -4,7 +4,7 @@ services:
   wordpress:
     image: wordpress
     restart: always
-    container_name: devonfw_wp
+    container_name: wordpress
     volumes:
       - './volumes/wordpress/wp-content:/var/www/html/wp-content'
     ports:
@@ -15,7 +15,7 @@ services:
   mysql:
     image: mysql:5.7
     restart: always
-    container_name: devonfw_wp_mysql
+    container_name: wordpress_mysql
     volumes:
       - './volumes/mysql/data:/var/lib/mysql'
     environment:
